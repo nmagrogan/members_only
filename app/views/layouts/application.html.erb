@@ -19,6 +19,12 @@
       <%= alert %>
     <% end %>
 
+    <nav>
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+      <% end %>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
