@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Extra gems
 gem 'devise', '~> 4.7', '>= 4.7.3'
+# Added bulma for css
+gem 'bulma-rails', '~> 0.9.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
