@@ -1,0 +1,21 @@
+
+<div class="box">
+    <article class="media">
+
+      <div class="media-content">
+        <div class="content">
+          <strong> <%= post.user.name %> </strong>
+          <p><%= post.content %></p>
+        </div>
+
+        <nav class="level">
+          <div class="level-left is-mobile">
+            <%= link_to 'Show', post %> <p>&emsp;</p>
+            <%= link_to 'Edit', edit_post_path(post) %> <p>&emsp;</p>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </nav>
+
+      </div>
+    </article>
+  </div>
