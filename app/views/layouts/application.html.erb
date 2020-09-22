@@ -38,18 +38,21 @@
 
       <div id="navbarExample" class="navbar-menu">
         <div class="navbar-end">
-          <div class="field is-grouped">
+          <div class="field is-grouped mt-2">
             <p class="control">
               <%= link_to 'New Post', new_post_path, class: 'button is-info is-inverted' %>
             </p>
             <p class="control">
               <% if user_signed_in? %>
-                <%= current_user.email %>
+                <%= link_to 'Edit User', edit_user_registration_path, class: 'button is-info is-inverted' %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'button is-info is-inverted' %>
+
+              <% else %>
+                <%= link_to 'Sign Up', new_user_registration_path, class: 'button is-info is-inverted' %>
+                <%= link_to 'Sign In', new_user_session_path, class: 'button is-info is-inverted' %>
               <% end %>
             </p>
-
           </div>
-
         </div>
       </div>
     </nav>
