@@ -1,5 +1,8 @@
-
 <h1>Posts</h1>
+
+<% if user_signed_in? %>
+  <p> <%= current_user.email %> </p>
+<% end %>
 
 <table>
   <thead>
