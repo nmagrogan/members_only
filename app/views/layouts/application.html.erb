@@ -11,17 +11,8 @@
 
   <body>
 
-    <% if flash[:notice] %>
-      <%= notice %>
-    <% end %>
 
-    <% if flash[:alert] %>
-      <%= alert %>
-    <% end %>
 
-    <nav>
-
-    </nav>
 
 
     <nav class="navbar is-info is-fixed-top">
@@ -63,10 +54,24 @@
     </nav>
 
 
+
+
+
     <section class="section">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-4">
+
+            <div class="mt-5">
+              <% if flash[:notice] %>
+                <%= notice %>
+              <% end %>
+
+              <% if flash[:alert] %>
+                <%= alert %>
+              <% end %>
+            </div>
+            
             <%= yield %>
           </div>
         </div>
